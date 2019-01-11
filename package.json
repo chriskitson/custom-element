@@ -7,7 +7,10 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "el-build": "npm run el-build-task && npm run el-package-task",
+    "el-build-task": "ng build custom-element --prod --output-hashing=none",
+    "el-package-task": "cat ./dist/custom-element/{polyfills,runtime,main}.js > ./dist/custom-element.js"
   },
   "private": true,
   "dependencies": {
@@ -28,10 +31,12 @@
     "@angular-devkit/build-angular": "~0.8.0",
     "@angular/cli": "~6.2.9",
     "@angular/compiler-cli": "^6.1.0",
+    "@angular/elements": "^7.2.0",
     "@angular/language-service": "^6.1.0",
     "@types/jasmine": "~2.8.8",
     "@types/jasminewd2": "~2.0.3",
     "@types/node": "~8.9.4",
+    "@webcomponents/webcomponentsjs": "^2.2.3",
     "codelyzer": "~4.3.0",
     "jasmine-core": "~2.99.1",
     "jasmine-spec-reporter": "~4.2.1",
