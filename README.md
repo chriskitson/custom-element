@@ -1,4 +1,6 @@
-# CustomElement
+# Custom Element
+
+This project illustrates how to wrap an angular app in a custom element (web component) using angular elements.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.2.9.
 
